@@ -1,4 +1,3 @@
-// Para el proyecto
 #include <iostream>
 #include "funciones.h"
 #include <string>
@@ -8,14 +7,13 @@ using namespace std;
 int main(){
 	int opcion;
 	do{
-		cout<<"\n=== MENU ===\n"<<endl;
-		cout<<"1. Agregar libro"<<endl;
-		cout<<"2. Eliminar libro"<<endl;
-		cout<<"3. Mostrar lista general de libros\n"<<endl;
-		cout<<"4. Mostrar libros ordenados por titulo\n";
-		cout<<"5. Informacion del grupo"<<endl;
-		cout<<"6. Salir del programa\n"<<endl;
-		cout<<"Seleccione una opcion: "<<endl;
+		cout<<"\n=== MENU ===\n";
+		cout<<"1. Agregar libro\n";
+		cout<<"2. Eliminar libro\n";
+		cout<<"3. Mostrar lista general de libros\n";
+		cout<<"4. Informacion del grupo\n";
+		cout<<"5. Salir del programa\n";
+		cout<<"Seleccione una opcion: \n";
 		cin>>opcion;
 		cin.ignore();
 		switch(opcion){
@@ -23,24 +21,21 @@ int main(){
 				agregarLibro();
 				break;
 			case 2:
-				//eliminar();
+				eliminarLibro();
 				break;
 			case 3:
 				mostrarLibros();
 				break;
 			case 4:
-				mostrarOrdenados();
+				infoGrupo();
 				break;
 			case 5: 
-				infoGrupo(); 
-				break;
-			case 6:
-				cout<<"Saliendo..."<<endl;
+				cout<<"Saliendo..."<<endl; 
 				break;
 			default:
 				cout<<"Opcion invalida"<<endl;
+				break;
 		}
 	} while(opcion!=5);
 	return 0;
 }
-
