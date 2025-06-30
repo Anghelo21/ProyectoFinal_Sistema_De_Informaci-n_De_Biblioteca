@@ -18,5 +18,5 @@ extern Libro biblioteca[max_libros];
 
 void mostrarLibros();
 void mostrarOrdenados();
-
+ 
 #endif

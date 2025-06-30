@@ -40,4 +40,4 @@ void mostrarOrdenados() {
              << copia[i].titulo << " | "
              << copia[i].autor << endl;
     }
-}
+} 
