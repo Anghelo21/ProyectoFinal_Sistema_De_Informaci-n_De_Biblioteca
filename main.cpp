@@ -1,19 +1,21 @@
 // Para el proyecto
 #include <iostream>
-#include <string>
 #include "funciones.h"
+#include <string>
+
 using namespace std;
 
 int main(){
 	int opcion;
 	do{
-		cout<<" --- Menu --- "<<endl;
+		cout<<"\n=== MENU ===\n"<<endl;
 		cout<<"1. Agregar libro"<<endl;
 		cout<<"2. Eliminar libro"<<endl;
-		cout<<"3. Mostrar lista general de libros"<<endl;
-		cout<<"4. Informacion del grupo"<<endl;
-		cout<<"5. Salir del programa"<<endl;
-		cout<<"Seleccione una opcion"<<endl;
+		cout<<"3. Mostrar lista general de libros\n"<<endl;
+		cout<<"4. Mostrar libros ordenados por titulo\n";
+		cout<<"5. Informacion del grupo"<<endl;
+		cout<<"6. Salir del programa\n"<<endl;
+		cout<<"Seleccione una opcion: "<<endl;
 		cin>>opcion;
 		cin.ignore();
 		switch(opcion){
@@ -24,11 +26,15 @@ int main(){
 				//eliminar();
 				break;
 			case 3:
-				//mostrar();
+				mostrarLibros();
 				break;
-			case 4: infoGrupo(); 
+			case 4:
+				mostrarOrdenados();
 				break;
-			case 5:
+			case 5: 
+				infoGrupo(); 
+				break;
+			case 6:
 				cout<<"Saliendo..."<<endl;
 				break;
 			default:

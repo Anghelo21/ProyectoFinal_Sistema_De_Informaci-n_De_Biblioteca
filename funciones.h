@@ -3,4 +3,6 @@
 
 void agregarLibro();
 void infoGrupo();
+void mostrarLibros();
+void mostrarOrdenados();
 #endif
