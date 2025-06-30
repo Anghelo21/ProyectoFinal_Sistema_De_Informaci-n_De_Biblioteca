@@ -13,7 +13,7 @@ struct Libro {
 };
 
 const int max_libros = 3;
- 
+  
 extern Libro biblioteca[max_libros];
 
 void mostrarLibros();

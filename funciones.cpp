@@ -7,7 +7,7 @@ Libro biblioteca[max_libros] = {
     {2, "Don Quijote de la Mancha", "Miguel de Cervantes", 1605, "Novela", true},
     {3, "El Principito", "Antoine de Saint-Exupery", 1943, "Fabula", true}
 };
- 
+  
 void mostrarLibros() {
     cout << "\nLISTADO DE LIBROS:\n";
     for (int i = 0; i < max_libros; i++) {
