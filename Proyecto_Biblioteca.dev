@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit1]
-FileName=main.cpp
+FileName=main_.cpp
 CompileCpp=1
 Folder=
 Compile=1
