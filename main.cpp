@@ -1,13 +1,8 @@
 // Para el proyecto
 #include <iostream>
 #include <string>
-#include <funciones.h>
+#include "funciones.h"
 using namespace std;
-
-struct contactoEmail{
-	string libro, autor, editorial;
-	int anio;
-};
 
 int main(){
 	int opcion;
@@ -22,7 +17,7 @@ int main(){
 		cin.ignore();
 		switch(opcion){
 			case 1:
-				//agregar();
+				agregarLibro();
 				break;
 			case 2:
 				//eliminar();
