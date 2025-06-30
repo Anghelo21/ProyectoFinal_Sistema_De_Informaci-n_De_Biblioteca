@@ -11,7 +11,8 @@ int main(){
 		cout<<"1. Agregar libro"<<endl;
 		cout<<"2. Eliminar libro"<<endl;
 		cout<<"3. Mostrar lista general de libros"<<endl;
-		cout<<"4. Salir del programa"<<endl;
+		cout<<"4. Informacion del grupo"<<endl;
+		cout<<"5. Salir del programa"<<endl;
 		cout<<"Seleccione una opcion"<<endl;
 		cin>>opcion;
 		cin.ignore();
@@ -25,13 +26,15 @@ int main(){
 			case 3:
 				//mostrar();
 				break;
-			case 4:
+			case 4: infoGrupo(); 
+				break;
+			case 5:
 				cout<<"Saliendo..."<<endl;
 				break;
 			default:
 				cout<<"Opcion invalida"<<endl;
 		}
-	} while(opcion!=4);
+	} while(opcion!=5);
 	return 0;
 }
 
