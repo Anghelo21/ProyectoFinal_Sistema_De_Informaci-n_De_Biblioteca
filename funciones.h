@@ -2,5 +2,5 @@
 #define FUNCIONES_H
 
 void agregarLibro();
-
+void infoGrupo();
 #endif
