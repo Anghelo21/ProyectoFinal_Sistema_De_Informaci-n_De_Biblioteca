@@ -7,58 +7,39 @@ using namespace std;
 int main(){
 	int opcion;
 	do{
-		cout<<"\t\t\t\t===================== MENU =====================\n";
-		
-    cout << "1. Agregar libro\t\t2. Eliminar libro\t\t3. Rentar libro\t\t4. Devolver libro" << endl;
-    cout << "      ____\t\t\t\t  __    __" << endl;
-    cout << "     |    |\t\t\t\t  \\ \\  / /" << endl;
-    cout << "     |    |\t\t\t\t   \\ \\/ /" << endl;
-    cout << " ____|    |____\t\t\t\t    \\  /" << endl;
-    cout << " |             |\t\t\t    /  \\" << endl;
-    cout << " |____    _____|\t\t\t   / /\\ \\" << endl;
-    cout << "     |    |\t\t\t\t  / /  \\ \\" << endl;
-    cout << "     |    |\t\t\t\t  --    --" << endl;
-    cout << "     |____|" << endl<< endl;
-
-    cout << "4. Mostrar lista general\t5. Informacion del grupo" << endl;
-    cout << "      ________\t\t\t\t _________" << endl;
-    cout << "     /_______/|\t\t\t\t/  _   _  \\" << endl;
-    cout << "    /_______/||\t\t\t\t| (_) (_) |" << endl;
-    cout << "   | _____ ||||\t\t\t\t \\_______/" << endl;
-    cout << "   ||_____|||||\t\t\t\t (/     \\)" << endl;
-    cout << "   |       ||||\t\t\t\t /       \\" << endl;
-    cout << "   |       ||/\t\t\t\t(_________)" << endl;
-    cout << "   '--------'" << endl << endl;
-
-    cout << "6. Salir del programa" << endl;
-    cout << "Seleccione una opcion: ";
-    cin >> opcion;
+		cout<<"========== MENU =========="<<endl;
+		cout<<"1. Gestion de libros"<<endl;
+		cout<<"2. Gestion de usuarios"<<endl;
+		cout<<"3. Gestion de prestamos"<<endl;
+		cout<<"4. Administracion del sistema"<<endl;
+		cout<<"5. Informacion de los creadores"<<endl;
+    	cout<<"6. Salir del programa"<<endl;
+    	cout<<"Seleccione una opcion: ";
+    	cin>>opcion;
 		cin.ignore();
 		switch(opcion){
 			case 1:
-				agregarLibro();
+				//gestionLibros();
 				break;
 			case 2:
-				eliminarLibro();
+				gestionUsuarios();
 				break;
 			case 3:
-				alquilarLibro();
+				//gestionPrestamos();
 				break;
 			case 4:
-				
-			case 5:
-				mostrarLibros();
+				//adminSis();
 				break;
-			case 6:
+			case 5:
 				infoGrupo();
 				break;
-			case 7: 
+			case 6: 
 				cout<<"Saliendo..."<<endl; 
 				break;
 			default:
 				cout<<"Opcion invalida"<<endl;
 				break;
 		}
-	} while(opcion!=7);
+	} while(opcion!=6);
 	return 0;
 }

@@ -5,21 +5,24 @@
 using namespace std;
 
 const int max_libros = 100;
-
-struct cantLibros;
+const int max_usuarios = 100;
 
 struct Libro{
-	int indic=103;
+	int indic;
 	string titulo;
 	string autor;
 	int anio;
 	bool dispo;
 };
 
-void agregarLibro();
-void eliminarLibro();
-void mostrarLibros();
+struct Usuario{
+	int id;
+	string nombre;
+	int edad;
+	string dni;
+};
+
+void gestionUsuarios();
 void infoGrupo();
-void alquilarLibro();
 
 #endif
