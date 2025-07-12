@@ -4,14 +4,14 @@
 #include <iostream>
 using namespace std;
 
-const int max_libros = 100;
-const int max_usuarios = 100;
-
 struct Libro{
-	int indic;
+	int indic=100;
 	string titulo;
 	string autor;
+	string editorial;
+	int NumPaginas;
 	int anio;
+	int cantidad;
 	bool dispo;
 };
 
@@ -21,7 +21,7 @@ struct Usuario{
 	int edad;
 	string dni;
 };
-
+void gestionLibros();
 void gestionUsuarios();
 void infoGrupo();
 

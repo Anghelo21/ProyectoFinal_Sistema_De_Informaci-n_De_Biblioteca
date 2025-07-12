@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+const int max_usuarios = 100;
 Usuario personas[max_usuarios]={
 	{1, "Anghelo", 18, "12345678"},
 	{2, "Samuel", 17, "87654321"}
