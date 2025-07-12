@@ -1,1 +1,4 @@
+*.win
+*.layout
+*.o
 *.exe
