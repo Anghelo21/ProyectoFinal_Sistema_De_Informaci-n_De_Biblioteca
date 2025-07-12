@@ -19,7 +19,7 @@ ObjectOutput=
 LogOutput=
 LogOutputEnabled=0
 OverrideOutput=0
-OverrideOutputName=
+OverrideOutputName=Proyecto_Biblioteca.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
@@ -28,8 +28,8 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
-UnitCount=5
+CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+UnitCount=6
 
 [VersionInfo]
 Major=1
@@ -39,14 +39,14 @@ Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=
-FileVersion=
+FileVersion=1.0.0.0
 FileDescription=Developed using the Dev-C++ IDE
 InternalName=
 LegalCopyright=
 LegalTrademarks=
 OriginalFilename=
 ProductName=
-ProductVersion=
+ProductVersion=1.0.0.0
 AutoIncBuildNr=0
 SyncProduct=1
 
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=2(gestionUsuarios).cpp
+FileName=GestionLibros.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +81,17 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=3(GestionLibros).cpp
+FileName=UsuarioPrestamos.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=info.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +101,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=5(info).cpp
+FileName=gestionUsuarios.cpp
 CompileCpp=1
 Folder=
 Compile=1

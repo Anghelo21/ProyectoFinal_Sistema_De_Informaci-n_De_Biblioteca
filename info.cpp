@@ -14,7 +14,7 @@ void infoGrupo() {
     cout << "Integrantes:\n";
     cout << " 1. Anghelo del Piero Calderon Morales\n";
     cout << " 2. Josue Adrian Sosa Cruz\n";
-    cout << " 3. Rene David Charaña Jalire\n";
+    cout << " 3. Rene David CharaÃ±a Jalire\n";
     cout << " 4. Samuel Alexander Gomez Salcedo\n";
     int aporte;
 	cout << "Escoge un integrante para conocer sus contribuciones: ";
@@ -22,7 +22,7 @@ void infoGrupo() {
 	switch(aporte) {
 		case 1:
         	cout << " \nAnghelo lidero la estructura general del proyecto:\n";
-        	cout << "- Creacion del menú principal\n";
+        	cout << "- Creacion del menÃº principal\n";
         	cout << "- Organizacion del proyecto en modulos .h y .cpp\n"<<endl;
         	 system("pause");
         	break;

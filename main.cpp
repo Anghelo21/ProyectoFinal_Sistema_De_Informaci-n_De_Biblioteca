@@ -11,7 +11,7 @@ int main(){
 		cout<<"1. Gestion de libros"<<endl;
 		cout<<"2. Gestion de usuarios"<<endl;
 		cout<<"3. Gestion de prestamos"<<endl;
-		cout<<"4. Administracion del sistema"<<endl;
+		cout<<"4. Gestion Administracion del Sistema"<<endl;
 		cout<<"5. Informacion de los creadores"<<endl;
     	cout<<"6. Salir del programa"<<endl;
     	cout<<"Seleccione una opcion: ";
@@ -25,10 +25,10 @@ int main(){
 				gestionUsuarios();
 				break;
 			case 3:
-				//gestionPrestamos();
+				usuarioPrestamos();
 				break;
 			case 4:
-				//adminSis();
+				//ADMINISTRACION();
 				break;
 			case 5:
 				infoGrupo();
