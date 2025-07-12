@@ -3,14 +3,12 @@
 #include <string>
 using namespace std;
 
-const int max_libros = 100;
 Libro biblioteca[max_libros] = {
-    {1,"Don Quijote de la Mancha", "Miguel de Cervantes", "Porrua", 1300, 1605, 4, false},
-    {2,"Cien anios de soledad", "Gabriel Garcia Marquez", "Alfaguara", 550, 1967, 3, false},
-    {3,"El Principito", "Antoine de Saint-Exupery", "Gran Travesia", 130, 1943, 4, false}
+    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 4, false},
+    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 3, false},
+    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 4, false}
 };
 
-    
 int cantLibros = 3;
 
 void agregarLibro(){
