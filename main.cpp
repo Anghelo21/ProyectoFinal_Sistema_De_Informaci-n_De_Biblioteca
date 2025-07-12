@@ -19,7 +19,7 @@ int main(){
 		cin.ignore();
 		switch(opcion){
 			case 1:
-				//gestionLibros();
+				gestionLibros();
 				break;
 			case 2:
 				gestionUsuarios();
