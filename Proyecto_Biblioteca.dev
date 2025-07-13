@@ -50,18 +50,8 @@ ProductVersion=1.0.0.0
 AutoIncBuildNr=0
 SyncProduct=1
 
-[Unit1]
-FileName=main.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit2]
-FileName=funciones.h
+FileName=(1) gestionLibros.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=GestionLibros.cpp
+FileName=(3) gestionPrestamos.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=UsuarioPrestamos.cpp
+FileName=(4) reporteGeneral.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=info.cpp
+FileName=(5) infoGrupo.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -101,7 +91,27 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=gestionUsuarios.cpp
+FileName=(2) gestionUsuarios.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit8]
+FileName=diseñocolors.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit1]
+FileName=funciones.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -111,7 +121,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=Reportes.cpp
+FileName=disenocolors.cpp
 CompileCpp=1
 Folder=
 Compile=1
