@@ -26,7 +26,7 @@ int main(){
 		cout<<" _______________________________________||______________________________________||____________________________________"<<endl;
 		cout<<"|_____________________________________________________________________________________________________________________|"<<endl;
 		cout<<"                                        ||                                      ||"<<endl;
-		cout<<"   4. Administracion del sistema\t||   5. Informacion de los creadores\t||   6. Salir del programa"<<endl;
+		cout<<"   4. Reporte                         \t||   5. Informacion de los creadores\t||   6. Salir del programa"<<endl;
 		cout<<"             _________       \t\t||\t        __________    \t\t||\t\t ______"<<endl;
 		cout<<"            |.-------.|      \t\t||\t      _|          |   \t\t||\t\t| EXIT |"<<endl;
 		cout<<"            ||       ||      \t\t||\t     | |   INFO   |   \t\t||\t\t|     o|"<<endl;
@@ -50,7 +50,7 @@ int main(){
 				usuarioPrestamos();
 				break;
 			case 4:
-				//ADMINISTRACION();
+				Reportegeneral();
 				break;
 			case 5:
 				infoGrupo();
