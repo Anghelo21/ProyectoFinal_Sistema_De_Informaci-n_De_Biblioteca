@@ -52,6 +52,7 @@ void Prestar(){
 
             cout << "El usuario " << nombreUsuario << " ha rentado el libro "
                  << biblioteca[i].titulo << " correctamente.\n";
+            biblioteca[i].contPrestamos++;
             return;
         }
     }

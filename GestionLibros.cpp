@@ -4,9 +4,9 @@
 using namespace std;
 
 Libro biblioteca[max_libros] = {
-    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 4, false},
-    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 3, false},
-    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 4, false}
+    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 0, false},
+    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 0, false},
+    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 0, false}
 };
 
 int cantLibros = 3;
@@ -25,8 +25,6 @@ void agregarLibro(){
 		cin>>li.NumPaginas;
 		cout<<"Anio de publicacion: ";
 		cin>>li.anio;
-		cout<<"Cantidad de copias del libro";
-		cin>>li.cantidad;
 		cin.ignore();
 		biblioteca[cantLibros] = li;
 		cantLibros++;
@@ -73,7 +71,6 @@ void mostrarLibros() {
 		cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 		cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 		cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
-		cout << "||Cantidad de copias     : " << biblioteca[i].cantidad << endl;
 		cout << "||Estado actual          : " 
      		 << (biblioteca[i].dispo ? "RENTADO" : "DISPONIBLE") << endl;
 		cout << "----------------------------------------\n";
@@ -100,7 +97,6 @@ void BuscarLibro(){
 				cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 				cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 				cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
-				cout << "||Cantidad de copias     : " << biblioteca[i].cantidad << endl;
 				cout << "||Estado actual          : " 
 		     		 << (biblioteca[i].dispo ? "RENTADO" : "DISPONIBLE") << endl;
 				cout << "----------------------------------------\n";
@@ -134,8 +130,6 @@ void Actualizarlibro(){
 				cin>>biblioteca[i].NumPaginas;
 				cout<<"Anio de publicacion: ";
 				cin>>biblioteca[i].anio;
-				cout<<"Cantidad de copias del libro";
-				cin>>biblioteca[i].cantidad;
 				Actualizar=true;
 			}
 		}
