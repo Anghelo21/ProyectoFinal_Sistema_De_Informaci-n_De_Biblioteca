@@ -31,7 +31,6 @@
 #define BG_MAGENTA  "\033[45m"
 #define BG_CYAN     "\033[46m"
 #define BG_WHITE    "\033[47m"
-
 using namespace std;
 
 int main(){
@@ -64,26 +63,21 @@ int main(){
 		cout<<BOLDCYAN<<"            |'-------'|      "<<RESET<<BOLDWHITE<<"\t\t||\t"<<RESET<<BOLDMAGENTA<<"     |__  ____\\|     "<<RESET<<BOLDWHITE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"|______|"<<RESET<<endl;
 		cout<<BOLDCYAN<<"               )___(         "<<RESET<<BOLDWHITE<<"\t\t||\t"<<RESET<<BOLDMAGENTA<<"        |/            "<<RESET<<BOLDWHITE<<"\t\t||\t\t"<<RESET<<endl;
 		cout<<BOLDWHITE<<" _______________________________________||______________________________________||_____________________________________"<<endl;
-		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;      
+		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;     
     	cout<<"\t\t\t\t\t\tSeleccione una opcion: ";
     	
     	cin>>opcion;
 		cin.ignore();
 		switch(opcion){
 			case 1:
-				gestionLibros();
 				break;
 			case 2:
-				gestionUsuarios();
 				break;
 			case 3:
-				gestionPrestamos();
 				break;
 			case 4:
-				reporteGeneral();
 				break;
 			case 5:
-				infoGrupo();
 				break;
 			case 6: 
 				cout<<"Saliendo..."<<endl; 
