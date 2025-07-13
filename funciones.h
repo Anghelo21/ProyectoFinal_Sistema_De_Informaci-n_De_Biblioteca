@@ -16,7 +16,7 @@ struct Libro {
     string editorial;
     int NumPaginas;
     int anio;
-    int cantidad;
+    int contPrestamos;
     bool dispo;
 };
 struct Prestamo {
@@ -44,6 +44,7 @@ extern int cantPrestamos;
 void gestionLibros();
 void gestionUsuarios();
 void usuarioPrestamos();
+void Reportegeneral();
 void infoGrupo();
 
 #endif
