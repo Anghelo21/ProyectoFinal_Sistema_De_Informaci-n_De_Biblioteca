@@ -32,7 +32,7 @@ void Libromasprestado(){
         cout << "No hay registros de préstamos.\n";
     }
 }
-void Reportegeneral(){
+void reporteGeneral(){
 	int Opcion;
 	do{
 		cout << "\n======== REPORTE GENERAL DEL SISTEMA ========\n";

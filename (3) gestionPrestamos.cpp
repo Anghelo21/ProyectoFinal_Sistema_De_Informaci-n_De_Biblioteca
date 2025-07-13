@@ -143,7 +143,7 @@ void mostrarPrestamos() {
     }
 }
 
-void usuarioPrestamos() {
+void gestionPrestamos() {
 	int selec;
 	do{
 		cout<<"========== GESTION DE PRESTAMOS =========="<<endl;

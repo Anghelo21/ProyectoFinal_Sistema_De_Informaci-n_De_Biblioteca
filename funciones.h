@@ -10,7 +10,7 @@ const int max_prestamos = 100;
 
 
 struct Libro {
-    int indic = 100;
+    int indic;
     string titulo;
     string autor;
     string editorial;
@@ -43,8 +43,8 @@ extern int cantPrestamos;
 
 void gestionLibros();
 void gestionUsuarios();
-void usuarioPrestamos();
-void Reportegeneral();
+void gestionPrestamos();
+void reporteGeneral();
 void infoGrupo();
 
 #endif

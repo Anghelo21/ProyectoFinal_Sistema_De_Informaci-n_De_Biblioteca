@@ -47,10 +47,10 @@ int main(){
 				gestionUsuarios();
 				break;
 			case 3:
-				usuarioPrestamos();
+				gestionPrestamos();
 				break;
 			case 4:
-				Reportegeneral();
+				reporteGeneral();
 				break;
 			case 5:
 				infoGrupo();

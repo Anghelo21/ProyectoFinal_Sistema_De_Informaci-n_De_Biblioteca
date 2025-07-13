@@ -19,9 +19,9 @@ void agregarLibro(){
 		getline(cin, li.titulo);
 		cout<<"Autor del libro: ";
 		getline(cin, li.autor);
-		cout<<"Ingrese el editorial del libro";
+		cout<<"Ingrese el editorial del libro: ";
 		getline(cin, li.editorial);
-		cout<<"Ingrese la cantidad de paginas del libro";
+		cout<<"Ingrese la cantidad de paginas del libro: ";
 		cin>>li.NumPaginas;
 		cout<<"Anio de publicacion: ";
 		cin>>li.anio;
