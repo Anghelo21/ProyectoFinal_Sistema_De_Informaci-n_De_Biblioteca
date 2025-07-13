@@ -118,13 +118,26 @@ void gestionUsuarios(){
 		cout<<"     |--| |=||=|\\\\       | |) |  | _|      | |_| |  \\__ \\  | |_| |  | - |   |   /    | |   | (_) |  \\__ \\ "<<endl;
 		cout<<"     |  | | || | \\\\      |___/   |___|      \\___/   |___/   \\___/   |_|_|   |_|_\\   |___|   \\___/   |___/ "<<endl;
 		cout<<" ____|__|_|_||_|__\\\\___________________________________________________________________________________________________"<<endl;
-		cout<<"|______________________________________________________________________________________________________________________|\n\n"<<RESET<<endl;
-		cout<<"1. Agregar nuevo usuario"<<endl;
-		cout<<"2. Modificar datos del usuario"<<endl;
-		cout<<"3. Eliminar usuario"<<endl;
-		cout<<"4. Ver todos los usuarios"<<endl;
-		cout<<"5. Retroceder"<<endl;
-		cout<<"Seleccione una opcion: ";
+		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;
+		cout<<BOLDYELLOW<<"   1. Agregar nuevo usuario"<<RESET<<BOLDBLUE<<"\t\t||"<<RESET<<BOLDCYAN<<"  2. Ver todos los usuarios"<<RESET<<BOLDBLUE<<"\t\t||"<<RESET<<BOLDGREEN<<"   3. Eliminar usuario"<<RESET<<endl;
+		cout<<BOLDYELLOW<<"                ________     "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"     ____      ____     "<<RESET<<BOLDBLUE<<"\t||\t"<<RESET<<BOLDGREEN<<"       ___  ___     "<<RESET<<endl;
+		cout<<BOLDYELLOW<<"              /  _   _  \\   "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"    /    \\____/    \\  "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDGREEN<<"       \\  \\/  /    "<<RESET<<endl;
+		cout<<BOLDYELLOW<<"              | (_) (_) |    "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"   |     /    \\     |  "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDGREEN<<"        \\    /      "<<RESET<<endl;
+		cout<<BOLDYELLOW<<"              \\_________/   "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"    \\___|      |___/   "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDGREEN<<"        /    \\      "<<RESET<<endl;
+		cout<<BOLDYELLOW<<"               (/     \\)    "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"   /____ \\____/ ____\\ "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDGREEN<<"       /  /\\  \\    "<<RESET<<endl;
+		cout<<BOLDYELLOW<<"               /_______\\    "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDCYAN<<"        /______\\       "<<RESET<<BOLDBLUE<<"\t\t||\t"<<RESET<<BOLDGREEN<<"      /__/  \\__\\   "<<RESET<<endl;
+		cout<<BOLDBLUE<<" _______________________________________||______________________________________||____________________________________"<<endl;
+		cout<<"|_____________________________________________________________________________________________________________________|"<<RESET<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||"<<RESET<<BOLDMAGENTA<<"   4. Modificar datos del usuario"<<RESET<<BOLDBLUE<<"\t||"<<RESET<<BOLDRED<<"   5. Retroceder      "<<BOLDBLUE<<"\t\t||"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"           __         "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<" ______ "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"          / /   /|     "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"| EXIT |"<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"         |  \\__/ |    "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"|     o|"<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"          \\   __/     "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"|      |"<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"          /  /        "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"|______|"<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<"\t\t\t||\t"<<RESET<<BOLDMAGENTA<<"         /__/         "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<RESET<<BOLDRED<<"        "<<RESET<<BOLDBLUE<<"\t\t||\t\t"<<endl;
+		cout<<BOLDBLUE<<" _______________________||______________________________________||______________________________________||____________"<<endl;
+		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;     
+    	cout<<"\t\t\t\t\t\tSeleccione una opcion: ";
 		cin>>selec;
 		cin.ignore();
 		switch(selec){
@@ -132,13 +145,13 @@ void gestionUsuarios(){
 				agregarUsuario();
 				break;
 			case 2:
-				modificarUsuario();
+				verUsuarios();
 				break;
 			case 3:
 				eliminarUsuario();
 				break;
 			case 4:
-				verUsuarios();
+				modificarUsuario();
 				break;
 			case 5:
 				cout<<"Restrocediendo..."<<endl;
