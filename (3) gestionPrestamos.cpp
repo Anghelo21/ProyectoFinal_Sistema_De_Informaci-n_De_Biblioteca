@@ -60,6 +60,7 @@ void Prestar(){
     if (!libroEncontrado) {
         cout << "Libro no encontrado.\n";
     }
+    system("pause");
 }
 
 void devolverLibro() {
@@ -110,6 +111,7 @@ void devolverLibro() {
     cantPrestamos--;
 
     cout << "Libro devuelto correctamente.\n";
+    system("pause");
 }
 
 void mostrarPrestamos() {
@@ -141,6 +143,7 @@ void mostrarPrestamos() {
         cout << "Usuario: " << nombreUsuario 
              << " | Libro rentado: " << tituloLibro << endl;
     }
+    system("pause");
 }
 
 void gestionPrestamos() {
