@@ -18,7 +18,7 @@ void agregarUsuario(){
 		getline(cin, user.nombre);
 		cout<<"Edad del usuario:"<<endl;
 		cin>>user.edad;
-		cin.ignore();
+		cin.ignore(); // Limpia el búfer
 		cout<<"DNI del usuario:"<<endl;
 		getline(cin, user.dni);
 		personas[cantUsuarios] = user;
@@ -27,7 +27,7 @@ void agregarUsuario(){
 	} else{
 		cout<<"Limite de usuarios alcanzado, no se puede agregar mas usuarios";
 	}
-	system("pause");
+	system("pause"); // Para que el sistema se pause hasta que el usuario presione "enter"
 }
 
 void modificarUsuario(){
@@ -36,9 +36,9 @@ void modificarUsuario(){
     cout<<"Ingrese el ID del usuario a modificar: ";
     cin>>idUsuario;
     cin.ignore();
-    for (int i=0; i<cantUsuarios; i++){
+    for (int i=0; i<cantUsuarios; i++){ // Itera hasta encontrar el ID del usuario
         if (personas[i].id == idUsuario){
-            encontrado=true;
+            encontrado=true; // Si lo encuentra muestra los datos y los vuelve a solicitar
             cout<<"Usuario encontrado: "<<endl; 
 			cout<<"Nombre: "<<personas[i].nombre<<endl;
             cout<<"Edad: "<<personas[i].edad<<endl;
@@ -57,7 +57,7 @@ void modificarUsuario(){
             break;
         }
     }
-    if (!encontrado){
+    if (!encontrado){ // En caso de no haber encontrado el ID
         cout<<"Usuario con ID "<<idUsuario<<" no encontrado"<<endl;
     }
     system("pause");
@@ -69,17 +69,17 @@ void eliminarUsuario(){
     cout<<"Ingrese el ID del usuario a eliminar: ";
     cin>>idUsuario;
     cin.ignore();
-    for (int i=0; i<cantUsuarios; i++){
-        if (personas[i].id == idUsuario){
-            encontrado=true;
+    for (int i=0; i<cantUsuarios; i++){ // Itera hasta encontrar al usuario
+        if (personas[i].id == idUsuario){ 
+            encontrado=true;              
             cout<<"Usuario encontrado: "<<endl; 
 			cout<<"Nombre: "<<personas[i].nombre<<endl;
             cout<<"Edad: "<<personas[i].edad<<endl;
             cout<<"DNI: "<<personas[i].dni<<endl;
-            for (int j=i; j<cantUsuarios-1; j++){
-                personas[j]=personas[j+1];
+            for (int j=i; j<cantUsuarios-1; j++){ // Si lo encuentra reemplaza la posición en el arreglo del usuario a eliminar
+                personas[j]=personas[j+1];        // y lo reemplaza con el siguiente
             }
-            cantUsuarios--;
+            cantUsuarios--; // Disminuye la cantidad de usuarios
             cout<<"Usuario eliminado con exito"<<endl;
             break;
         }
@@ -94,8 +94,8 @@ void verUsuarios(){
     if (cantUsuarios == 0){
         cout<<"No hay usuarios registrados."<<endl;
     } else{
-        cout<<"========== Lista de Usuarios =========="<<endl;
-        for (int i=0; i<cantUsuarios; i++){
+        cout<<"========== Lista de Usuarios =========="<<endl; 
+        for (int i=0; i<cantUsuarios; i++){ // Muestra en pantalla a todos los usuarios registrados con sus datos
             cout<<"ID: "<<personas[i].id<<endl;
             cout<<"Nombre: "<<personas[i].nombre<<endl;
             cout<<"Edad: "<<personas[i].edad<<endl;
@@ -107,8 +107,8 @@ void verUsuarios(){
 }
 
 void gestionUsuarios(){
-	int selec;
-	do{
+	int selec; // Variable para la elección de las opciones
+	do{ // Diseño del submenú
 		cout<<BOLDBLUE<<"\t\t\t   ___     ___     ___    _____    ___     ___    _  _  "<<endl;                 
 		cout<<"\t\t\t  / __|   | __|   / __|  |_   _|  |_ _|   / _ \\  | \\| |  "<<endl;                
 		cout<<"\t\t\t | (_ |   | _|    \\__ \\    | |     | |   | (_) | | .` |  "<<endl;                
@@ -138,7 +138,7 @@ void gestionUsuarios(){
 		cout<<BOLDBLUE<<" _______________________||______________________________________||______________________________________||____________"<<endl;
 		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;     
     	cout<<"\t\t\t\t\t\tSeleccione una opcion: ";
-		cin>>selec;
+		cin>>selec; 
 		cin.ignore();
 		switch(selec){
 			case 1:

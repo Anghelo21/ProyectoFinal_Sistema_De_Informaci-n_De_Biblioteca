@@ -32,7 +32,7 @@
 #include <string>
 using namespace std;
 
-const int max_libros = 100;
+const int max_libros = 100; // Límite de usuarios registrados
 const int max_usuarios = 100;
 const int max_prestamos = 100;
 
@@ -54,10 +54,10 @@ struct Prestamo {
 
 
 struct Usuario {
-    int id;
-    string nombre;
-    int edad;
-    string dni;
+    int id; // Identificador del usuario
+    string nombre; // Para el nombre del usuario
+    int edad; // Para la edad del usuario
+    string dni; // Para el DNI del usuario
 };
 
 extern Libro biblioteca[max_libros];
