@@ -7,7 +7,7 @@ using namespace std;
 void infoGrupo() {
 	int aporte;
 	do{
-    	cout<<BOLDWHITE<<"\t\t\t ___    _  _    ___    ___     ___    __  __    ___     ___    ___     ___    _  _       "<<endl;
+    	cout<<BOLDMAGENTA<<"\t\t\t ___    _  _    ___    ___     ___    __  __    ___     ___    ___     ___    _  _       "<<endl;
 		cout<<"\t\t\t|_ _|  | \\| |  | __|  / _ \\   | _ \\  |  \\/  |  /   \\   / __|  |_ _|   / _ \\  | \\| |    "<<endl; 
 		cout<<"\t\t\t | |   | .` |  | _|  | (_) |  |   /  | |\\/| |  | - |  | (__    | |   | (_) | | .` |     "<<endl;
 		cout<<"\t\t\t|___|  |_|\\_|  |_|    \\___/   |_|_\\  |_|__|_|  |_|_|   \\___|  |___|   \\___/  |_|\\_|     "<<endl;   
@@ -37,25 +37,28 @@ void infoGrupo() {
 		case 1:
         	cout << " \n\t\t\t\t|| Anghelo lidero la estructura general del proyecto ||\n\n";
         	cout << "|| Creacion del menu principal\n\n";
+        	cout << "|| Encargado de la funcion gestionUsuarios\n\n";
         	cout << "|| Organizacion del proyecto en modulos .h y .cpp\n\n"<<endl;
         	 system("pause");
         	break;
     	case 2:
         	cout << " \n\t\t\t\t|| Sosa se encargo de la muestra de datos ||\n\n";
-        	cout << "|| Muestra de la lista de libros.\n\n";
-        	cout << "|| Aplicacion del algoritmo de muestra.\n\n";
-        	cout << "|| Integracion correcta de la funcion al menu principal.\n\n"<<endl;
+        	cout << "|| Muestra de la lista de prestamos.\n\n";
+        	cout << "|| Encargado de la funcion gestionPrestamos\n\n";
+        	cout << "|| Integracion correcta de las funciones al menu principal.\n\n"<<endl;
         	 system("pause");
         	break;
     	case 3:
         	cout << " \n\t\t\t\t|| David responsable de mejorar la presentacion de informacion al usuario ||\n\n";
         	cout << "|| Optimizacion de informacion del grupo y docente.\n\n";
-        	cout << "|| Mejoramiento de interfaz al usuario.\n\n"<<endl;
+        	cout << "|| Encargado de la funcion infoGrupo\n\n";
+        	cout << "|| Mejoramiento de interfaz al usuario y diseño.\n\n"<<endl;
         	 system("pause");
         	break;
 		case 4:
-        	cout << " \n\t\t\t\t|| Samuel fue responsable de ||\n\n";
-        	cout << "|| Eliminacion de libros.\n\n";
+        	cout << " \n\t\t\t\t|| Samuel fue responsable de gestionar los libros||\n\n";
+        	cout << "|| Encargado de la funcion reporteGeneral\n\n";
+        	cout << "|| Encargado de la funcion gestionLibros\n\n";
         	cout << "|| Incorporacion de libros al programa.\n\n"<<endl;
         	 system("pause");
         	break;
