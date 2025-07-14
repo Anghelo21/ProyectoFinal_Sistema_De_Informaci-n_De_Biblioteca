@@ -115,7 +115,7 @@ void Actualizarlibro(){
 		cout<<"No hay productos registrados"<<endl;
 	}else{
 		int Actualizarlibro;
-		cout<<"Ingrese el nombre del producto a actualizar"<<endl;
+		cout<<"Ingrese el indice del producto a actualizar"<<endl;
 		cin>>Actualizarlibro;
 		cin.ignore();
 		bool Actualizar=false;
@@ -163,7 +163,7 @@ cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<
 		cout<<BOLDBLUE<<"          |__|          "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDWHITE<<"         /__/  \\__\\    "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDGREEN<<"   |_______|||       "<<RESET<<endl;
 		cout<<BOLDYELLOW<<" _______________________________________||______________________________________||____________________________________"<<endl;
 		cout<<"|_____________________________________________________________________________________________________________________|"<<RESET<<endl;
-		cout<<BOLDCYAN<<"   4. Buscar Libro           "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDMAGENTA<<"   5. Informacion de los creadores"<<RESET<<BOLDYELLOW<<"\t||"<<RESET<<BOLDRED<<"   6. Retroceder       "<<endl;
+		cout<<BOLDCYAN<<"   4. Buscar libro           "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDMAGENTA<<"         5. Actualizar libro    "<<RESET<<BOLDYELLOW<<"\t||"<<RESET<<BOLDRED<<"   6. Retroceder       "<<endl;
 		cout<<BOLDCYAN<<"             _______         "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDMAGENTA<<"          ______      "<<RESET<<BOLDYELLOW<<"\t\t||\t\t"<<RESET<<BOLDRED<<" ______"<<RESET<<endl;
 		cout<<BOLDCYAN<<"            //     \\\\      "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDMAGENTA<<"      /\\       \\\\  "<<RESET<<BOLDYELLOW<<"\t\t||\t\t"<<RESET<<BOLDRED<<"| EXIT |"<<RESET<<endl;
 		cout<<BOLDCYAN<<"           ||       ||       "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDMAGENTA<<"     /  \\       \\\\ "<<RESET<<BOLDYELLOW<<"\t\t||\t\t"<<RESET<<BOLDRED<<"|     o|"<<RESET<<endl;
