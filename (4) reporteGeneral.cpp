@@ -6,14 +6,17 @@ using namespace std;
 void Reportelibros(){
 	cout << "---- REPORTE DE LIBROS ----\n";
     cout << "Total de libros registrados: " << cantLibros << endl;
+    system("pause");
 }
 void Reporteusuarios(){
 	cout << "---- REPORTE DE USUARIOS ----\n";
     cout << "Total de usuarios registrados: " << cantUsuarios<< endl;
+    system("pause");
 }
 void Reporteprestamos(){
 	cout << "---- REPORTE DE PRÉSTAMOS ----\n";
     cout << "Total de prestamos activos: " << cantPrestamos << endl;
+    system("pause");
 }
 void Libromasprestado(){
 	int maxPrestamos = 0, pos = -1;
@@ -32,6 +35,7 @@ void Libromasprestado(){
     } else {
         cout << "No hay registros de prestamos.\n";
     }
+    system("pause");
 }
 void reporteGeneral(){
 	int Opcion;
