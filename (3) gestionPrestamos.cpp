@@ -36,8 +36,8 @@ void Prestar(){
         if (biblioteca[i].indic == idLibro) {
             libroEncontrado = true;
 
-            if (biblioteca[i].dispo) {
-                cout << "El libro ya esta rentado.\n";
+            if (biblioteca[i].copias <= 0) {
+                cout << "No hay copias disponibles de este libro.\n";
                 system("pause");
                 return;
             }
@@ -50,12 +50,12 @@ void Prestar(){
                 }
             }
 
-            biblioteca[i].dispo = true;
             prestamos[cantPrestamos++] = { idUsuario, idLibro };
 
             cout << "El usuario " << nombreUsuario << " ha rentado el libro "
                  << biblioteca[i].titulo << " correctamente.\n";
             biblioteca[i].contPrestamos++;
+            biblioteca[i].copias--;
             system("pause");
             return;
         }
@@ -106,7 +106,7 @@ void devolverLibro() {
 
     for (int i = 0; i < cantLibros; i++) {
         if (biblioteca[i].indic == idLibro) {
-            biblioteca[i].dispo = false;
+            biblioteca[i].copias++;
             break;
         }
     }
