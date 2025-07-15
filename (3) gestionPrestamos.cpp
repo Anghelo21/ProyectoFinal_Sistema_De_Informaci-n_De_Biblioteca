@@ -24,6 +24,7 @@ void Prestar(){
 
     if (!usuarioExiste) {
         cout << "Usuario no encontrado.\n";
+        system("pause");
         return;
     }
 
@@ -37,12 +38,14 @@ void Prestar(){
 
             if (biblioteca[i].dispo) {
                 cout << "El libro ya esta rentado.\n";
+                system("pause");
                 return;
             }
 
             for (int j = 0; j < cantPrestamos; j++) {
                 if (prestamos[j].idUsuario == idUsuario && prestamos[j].idLibro == idLibro) {
                     cout << "Ya tienes ese libro prestado.\n";
+                    system("pause");
                     return;
                 }
             }
@@ -53,6 +56,7 @@ void Prestar(){
             cout << "El usuario " << nombreUsuario << " ha rentado el libro "
                  << biblioteca[i].titulo << " correctamente.\n";
             biblioteca[i].contPrestamos++;
+            system("pause");
             return;
         }
     }
@@ -79,6 +83,7 @@ void devolverLibro() {
 
     if (!usuarioValido) {
         cout << "❌ Usuario no encontrado.\n";
+        system("pause");
         return;
     }
 
@@ -95,6 +100,7 @@ void devolverLibro() {
 
     if (indicePrestamo == -1) {
         cout << "No se encontro prestamo de ese libro para este usuario.\n";
+        system("pause");
         return;
     }
 
@@ -117,6 +123,7 @@ void devolverLibro() {
 void mostrarPrestamos() {
     if (cantPrestamos == 0) {
         cout << "No hay libros rentados actualmente.\n";
+        system("pause");
         return;
     }
 
