@@ -129,8 +129,10 @@ void Actualizarlibro(){
 				getline(cin, biblioteca[i].editorial);
 				cout<<"Ingrese la cantidad de paginas del libro";
 				cin>>biblioteca[i].NumPaginas;
+				cin.ignore();
 				cout<<"Anio de publicacion: ";
 				cin>>biblioteca[i].anio;
+				cin.ignore();
 				Actualizar=true;
 			}
 		}
