@@ -5,9 +5,9 @@
 using namespace std;
 
 Libro biblioteca[max_libros] = {
-    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 0, false},
-    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 0, false},
-    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 0, false}
+    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 2, 0},
+    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 3, 0},
+    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 4, 0}
 };
 
 int cantLibros = 3;
@@ -26,6 +26,9 @@ void agregarLibro(){
 		cin>>li.NumPaginas;
 		cout<<"Anio de publicacion: ";
 		cin>>li.anio;
+		cout<<"Copias del libro: ";
+		cin>>li.copias;
+		li.contPrestamos=0;
 		cin.ignore();
 		biblioteca[cantLibros] = li;
 		cantLibros++;
@@ -72,9 +75,7 @@ void mostrarLibros() {
 		cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 		cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 		cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
-		cout << "||Estado actual          : " 
-     		 << (biblioteca[i].dispo ? "RENTADO" : "DISPONIBLE") << endl;
-		cout << "----------------------------------------\n";
+		cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
     }
 	system("pause");
 }
@@ -98,9 +99,7 @@ void BuscarLibro(){
 				cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 				cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 				cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
-				cout << "||Estado actual          : " 
-		     		 << (biblioteca[i].dispo ? "RENTADO" : "DISPONIBLE") << endl;
-				cout << "----------------------------------------\n";
+				cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
 				Encontrar=true;
 			}
 		}
@@ -129,9 +128,10 @@ void Actualizarlibro(){
 				getline(cin, biblioteca[i].editorial);
 				cout<<"Ingrese la cantidad de paginas del libro";
 				cin>>biblioteca[i].NumPaginas;
-				cin.ignore();
 				cout<<"Anio de publicacion: ";
 				cin>>biblioteca[i].anio;
+				cout<<"Copias del libro: ";
+				cin>>biblioteca[i].copias;
 				cin.ignore();
 				Actualizar=true;
 			}
