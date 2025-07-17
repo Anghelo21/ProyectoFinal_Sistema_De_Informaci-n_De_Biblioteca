@@ -5,9 +5,9 @@
 using namespace std;
 
 Libro biblioteca[max_libros] = {
-    {1,"Don Quijote", "Cervantes", "Porrua", 1300, 1605, 2, 0},
-    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 3, 0},
-    {3,"El Principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 4, 0}
+    {1,"Don quijote", "Cervantes", "Porrua", 1300, 1605, 5, 0},
+    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 5, 0},
+    {3,"El principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 5, 0}
 };
 
 int cantLibros = 3;
@@ -79,36 +79,30 @@ void mostrarLibros() {
     }
 	system("pause");
 }
-void BuscarLibro(){
-	if(cantLibros==0){
-		cout<<"No hay libros registrados"<<endl;
-	}else{
-		int Buscarlibro;
-		cout<<"Ingrese el indice del libro a buscar"<<endl;
-		cin>>Buscarlibro;
-		cin.ignore();
-		bool Encontrar = false;
-		for(int i=0; i<cantLibros; i++){
-			if(biblioteca[i].indic == Buscarlibro){
-				cout << "\n----------------------------------------\n";
-				cout << "           LIBRO ENCONTRADO" << endl;
-				cout << "----------------------------------------\n";
-				cout << "||Codigo del libro       : " << biblioteca[i].indic << endl;
-				cout << "||Titulo                 : " << biblioteca[i].titulo << endl;
-				cout << "||Autor                  : " << biblioteca[i].autor << endl;
-				cout << "||Editorial              : " << biblioteca[i].editorial << endl;
-				cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
-				cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
-				cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
-				Encontrar=true;
-			}
-		}
-		if(Encontrar==false){
-			cout<<"Producto no encontrado"<<endl;
-		}
-	}
-	system("pause");
+
+void buscarLibros(const string& palabra){
+    bool encontrado=false;
+    for (int i=0; i<cantLibros; ++i){
+        if (biblioteca[i].titulo.find(palabra)!=string::npos){
+            cout << "\n----------------------------------------\n";
+			cout << "           LIBRO ENCONTRADO" << endl;
+			cout << "----------------------------------------\n";
+			cout << "||Codigo del libro       : " << biblioteca[i].indic << endl;
+			cout << "||Titulo                 : " << biblioteca[i].titulo << endl;
+			cout << "||Autor                  : " << biblioteca[i].autor << endl;
+			cout << "||Editorial              : " << biblioteca[i].editorial << endl;
+			cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
+			cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
+			cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
+            encontrado=true;
+        }
+    }
+    if (!encontrado){
+        cout<<"No se encontraron libros con esa palabra"<<endl;
+    }
+    system("pause");
 }
+
 void Actualizarlibro(){
 	if(cantLibros==0){
 		cout<<"No hay productos registrados"<<endl;
@@ -177,6 +171,7 @@ cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<
 	    cout << "Seleccione una opcion: ";
 	    cin >> opcion;
 		cin.ignore();
+		string palabra;
 		switch(opcion){
 			case 1:
 				agregarLibro();
@@ -188,7 +183,9 @@ cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<
 				mostrarLibros();
 				break;
 			case 4:
-				BuscarLibro();
+    			cout<<"Buscar: "<<endl;
+    			getline(cin, palabra);
+    			buscarLibros(palabra);
 				break;
 			case 5:
 				Actualizarlibro();
