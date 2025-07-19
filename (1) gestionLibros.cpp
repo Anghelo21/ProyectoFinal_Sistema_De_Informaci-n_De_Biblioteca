@@ -5,9 +5,9 @@
 using namespace std;
 
 Libro biblioteca[max_libros] = {
-    {1,"Don quijote", "Cervantes", "Porrua", 1300, 1605, 5, 0},
-    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 5, 0},
-    {3,"El principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 5, 0}
+    {1,"Don quijote", "Cervantes", "Porrua", 1300, 1605, 5, 5, 0},
+    {2,"Cien anios de soledad", "G. Garcia Marquez", "Alfaguara", 550, 1967, 5, 5, 0},
+    {3,"El principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 5, 5, 0}
 };
 
 int idMaxLibros = 3;
@@ -27,10 +27,11 @@ void agregarLibro(){
 		cin>>li.NumPaginas;
 		cout<<"Anio de publicacion: ";
 		cin>>li.anio;
-		cout<<"Copias del libro: ";
+		cout<<"Total de copias del libro: ";
 		cin>>li.copias;
-		li.contPrestamos=0;
-		cin.ignore();
+		li.copiastotales = li.copias;
+		li.contPrestamos = 0;
+		cin.ignore();      
 		biblioteca[cantLibros] = li;
 		cantLibros++;
 		cout<<"Libro agregado exitosamente"<<endl;
@@ -73,8 +74,9 @@ void mostrarLibros() {
 		cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 		cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 		cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
+		cout << "||Total de copias        : " << biblioteca[i].copiastotales << endl;
 		cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
-    }
+	}	
 	system("pause");
 }
 
@@ -91,8 +93,8 @@ void buscarLibros(const string& palabra){
 			cout << "||Editorial              : " << biblioteca[i].editorial << endl;
 			cout << "||Numero de paginas      : " << biblioteca[i].NumPaginas << endl;
 			cout << "||Anio de publicacion    : " << biblioteca[i].anio << endl;
+			cout << "||Copias totales         : " << biblioteca[i].copiastotales << endl;
 			cout << "||Copias disponibles     : " << biblioteca[i].copias << endl;
-            encontrado=true;
         }
     }
     if (!encontrado){
@@ -116,16 +118,24 @@ void Actualizarlibro(){
 				getline(cin, biblioteca[i].titulo);
 				cout<<"Autor del libro: ";
 				getline(cin, biblioteca[i].autor);
-				cout<<"Ingrese el editorial del libro";
+				cout<<"Ingrese el editorial del libro: ";
 				getline(cin, biblioteca[i].editorial);
-				cout<<"Ingrese la cantidad de paginas del libro";
+				cout<<"Ingrese la cantidad de paginas del libro: ";
 				cin>>biblioteca[i].NumPaginas;
 				cout<<"Anio de publicacion: ";
 				cin>>biblioteca[i].anio;
-				cout<<"Copias del libro: ";
+				cout<<"Copias disponibles del libro: ";
 				cin>>biblioteca[i].copias;
+				char actualizarTotales;
+				cout << "¿Deseas actualizar el total de copias originales? (s/n): ";
+				cin >> actualizarTotales;
+				if(actualizarTotales == 's' || actualizarTotales == 'S'){
+					cout << "Nuevo total de copias (actualmente tiene " << biblioteca[i].copiastotales << "): ";
+					cin >> biblioteca[i].copiastotales;
+				}
 				cin.ignore();
-				Actualizar=true;
+				Actualizar = true;
+				break;
 			}
 		}
 		if(Actualizar==false){
@@ -148,7 +158,7 @@ void gestionLibros(){
 	 	cout<<" ____|__|_|_||_|__\\\\___________________________________________________________________________________________________"<<endl;
 		cout<<"|______________________________________________________________________________________________________________________|"<<RESET<<endl;
 		
-cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDWHITE<<"   2. Eliminar libros  "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDGREEN<<"  3. Mostrar lista general"<<RESET<<endl;
+		cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDWHITE<<"   2. Eliminar libros  "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<BOLDGREEN<<"  3. Mostrar lista general"<<RESET<<endl;
 		cout<<BOLDBLUE<<"           __           "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDWHITE<<"          ___  ___      "<<RESET<<BOLDYELLOW<<"\t||\t"<<RESET<<BOLDGREEN<<"      ________        "<<RESET<<endl;
 		cout<<BOLDBLUE<<"          |  |          "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDWHITE<<"          \\  \\/  /     "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDGREEN<<"    /_______/|       "<<RESET<<endl;
 		cout<<BOLDBLUE<<"      ____|  |____      "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDWHITE<<"           \\    /      "<<RESET<<BOLDYELLOW<<"\t\t||\t"<<RESET<<BOLDGREEN<<"   | _____ |||       "<<RESET<<endl;

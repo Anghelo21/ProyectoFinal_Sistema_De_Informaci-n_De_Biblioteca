@@ -45,6 +45,7 @@ struct Libro {
     int NumPaginas;
     int anio;
     int copias;
+    int copiastotales;
     int contPrestamos;
 };
 struct Prestamo {
