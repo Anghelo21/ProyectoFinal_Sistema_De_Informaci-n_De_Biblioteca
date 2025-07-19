@@ -74,17 +74,22 @@ void reporteGeneral(){
 		switch(Opcion){
 			case 1:
 				Reportelibros();
+				system("cls");
 				break;
 			case 2:
 				Reporteusuarios();
+				system("cls");
 				break;
 			case 3:
 				Reporteprestamos();
+				system("cls");
 				break;
 			case 4:
 				Libromasprestado();
+				system("cls");
 				break;
 			case 5:
+				system("cls");
 				cout<<"Restrocediendo..."<<endl;
 				break;
 			default:

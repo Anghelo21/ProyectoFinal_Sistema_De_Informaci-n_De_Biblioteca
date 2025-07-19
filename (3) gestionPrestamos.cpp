@@ -190,14 +190,18 @@ void gestionPrestamos() {
 		switch(selec){
 			case 1:
 				Prestar();
+				system("cls");
 				break;
 			case 2:
 				devolverLibro();
+				system("cls");
 				break;
 			case 3:
 				mostrarPrestamos();
+				system("cls");
 				break;
 			case 4:
+				system("cls");
 				cout<<"Restrocediendo..."<<endl;
 				break;
 			default:

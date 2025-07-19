@@ -40,6 +40,7 @@ void infoGrupo() {
         	cout << "|| Encargado de la funcion gestionUsuarios\n\n";
         	cout << "|| Organizacion del proyecto en modulos .h y .cpp\n\n"<<endl;
         	 system("pause");
+        	 system("cls");
         	break;
     	case 2:
         	cout << " \n\t\t\t\t|| Sosa se encargo de la muestra de datos ||\n\n";
@@ -47,6 +48,7 @@ void infoGrupo() {
         	cout << "|| Encargado de la funcion gestionPrestamos\n\n";
         	cout << "|| Integracion correcta de las funciones al menu principal.\n\n"<<endl;
         	 system("pause");
+        	 system("cls");
         	break;
     	case 3:
         	cout << " \n\t\t\t\t|| David responsable de mejorar la presentacion de informacion al usuario ||\n\n";
@@ -54,6 +56,7 @@ void infoGrupo() {
         	cout << "|| Encargado de la funcion infoGrupo\n\n";
         	cout << "|| Mejoramiento de interfaz al usuario y diseño.\n\n"<<endl;
         	 system("pause");
+        	 system("cls");
         	break;
 		case 4:
         	cout << " \n\t\t\t\t|| Samuel fue responsable de gestionar los libros||\n\n";
@@ -61,9 +64,11 @@ void infoGrupo() {
         	cout << "|| Encargado de la funcion gestionLibros\n\n";
         	cout << "|| Incorporacion de libros al programa.\n\n"<<endl;
         	 system("pause");
+        	 system("cls");
         	break;
         case 5:
-        	cout<<"Restrocediendo..."<<endl;
+        	system("cls");
+			cout<<"Restrocediendo..."<<endl;
         	break;
     	default:
         	cout << " Error, no es una opcion valida.\n"<<endl;

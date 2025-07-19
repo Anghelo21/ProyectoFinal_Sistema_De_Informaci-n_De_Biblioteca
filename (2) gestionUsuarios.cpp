@@ -6,9 +6,11 @@ using namespace std;
 
 Usuario personas[max_usuarios] = {
     {1, "Anghelo", 18, "12345678"},
-    {2, "Samuel", 17, "87654321"}
+    {2, "Samuel", 17, "87654321"},
+    {3, "Sosa", 18, "82746129"},
+    {4, "David", 20, "61283765"}
 };
-int cantUsuarios = 2;
+int cantUsuarios = 4;
 
 void agregarUsuario(){
 	if (cantUsuarios<max_usuarios){
@@ -80,6 +82,9 @@ void eliminarUsuario(){
                 personas[j]=personas[j+1];        // y lo reemplaza con el siguiente
             }
             cantUsuarios--; // Disminuye la cantidad de usuarios
+            for (int i = 0; i < cantUsuarios; i++) {
+            personas[i].id = i + 1;
+            }
             cout<<"Usuario eliminado con exito"<<endl;
             break;
         }
@@ -143,17 +148,22 @@ void gestionUsuarios(){
 		switch(selec){
 			case 1:
 				agregarUsuario();
+				system("cls");
 				break;
 			case 2:
 				verUsuarios();
+				system("cls");
 				break;
 			case 3:
 				eliminarUsuario();
+				system("cls");
 				break;
 			case 4:
 				modificarUsuario();
+				system("cls");
 				break;
 			case 5:
+				system("cls");
 				cout<<"Restrocediendo..."<<endl;
 				break;
 			default:

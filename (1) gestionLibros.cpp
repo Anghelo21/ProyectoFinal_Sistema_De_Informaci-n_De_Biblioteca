@@ -175,23 +175,29 @@ cout<<BOLDBLUE<<"   1. Agregar libros    "<<RESET<<BOLDYELLOW<<"\t\t||"<<RESET<<
 		switch(opcion){
 			case 1:
 				agregarLibro();
+				system("cls");
 				break;
 			case 2:
 				eliminarLibro();
+				system("cls");
 				break;
 			case 3:
 				mostrarLibros();
+				system("cls");
 				break;
 			case 4:
     			cout<<"Buscar: "<<endl;
     			getline(cin, palabra);
     			buscarLibros(palabra);
+    			system("cls");
 				break;
 			case 5:
 				Actualizarlibro();
+				system("cls");
 				break;
 			case 6: 
-				cout<<"Regresando..."<<endl; 
+				system("cls");
+				cout<<"Restrocediendo..."<<endl; 
 				break;
 			default:
 				cout<<"Opcion invalida"<<endl;
