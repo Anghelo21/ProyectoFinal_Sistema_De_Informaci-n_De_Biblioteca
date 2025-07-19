@@ -10,12 +10,13 @@ Libro biblioteca[max_libros] = {
     {3,"El principito", "Saint-Exupery", "Gran Travesia", 130, 1943, 5, 0}
 };
 
+int idMaxLibros = 3;
 int cantLibros = 3;
 
 void agregarLibro(){
 	if(cantLibros<max_libros){
 		Libro li;
-		li.indic = cantLibros + 1;
+		li.indic = idMaxLibros + 1;
 		cout<<"Nombre del libro: ";
 		getline(cin, li.titulo);
 		cout<<"Autor del libro: ";
@@ -54,9 +55,6 @@ void eliminarLibro(){
         		biblioteca[i]=biblioteca[i+1];
     		}
     		cantLibros--;
-    		for (int i = 0; i < cantLibros; i++) {
-            biblioteca[i].indic = i + 1;
-            }
     		cout<<"Libro eliminado"<<endl;
 		}
 	}

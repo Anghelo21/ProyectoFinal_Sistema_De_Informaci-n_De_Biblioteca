@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+	system("");
 	int opcion;
 	do{
 		cout<<BOLDWHITE<<"                                         _____________________________________                         "<<endl;

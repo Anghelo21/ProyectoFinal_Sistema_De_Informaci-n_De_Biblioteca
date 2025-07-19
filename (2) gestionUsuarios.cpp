@@ -10,12 +10,14 @@ Usuario personas[max_usuarios] = {
     {3, "Sosa", 18, "82746129"},
     {4, "David", 20, "61283765"}
 };
+
+int idMaxUsuarios = 4;
 int cantUsuarios = 4;
 
 void agregarUsuario(){
 	if (cantUsuarios<max_usuarios){
 		Usuario user;
-		user.id = cantUsuarios + 1;
+		user.id = idMaxUsuarios + 1;
 		cout<<"Nombre del usuario:"<<endl;
 		getline(cin, user.nombre);
 		cout<<"Edad del usuario:"<<endl;
@@ -82,9 +84,6 @@ void eliminarUsuario(){
                 personas[j]=personas[j+1];        // y lo reemplaza con el siguiente
             }
             cantUsuarios--; // Disminuye la cantidad de usuarios
-            for (int i = 0; i < cantUsuarios; i++) {
-            personas[i].id = i + 1;
-            }
             cout<<"Usuario eliminado con exito"<<endl;
             break;
         }

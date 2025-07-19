@@ -32,8 +32,8 @@
 #include <string>
 using namespace std;
 
-const int max_libros = 100; // LÃ­mite de usuarios registrados
-const int max_usuarios = 100;
+const int max_libros = 100; 
+const int max_usuarios = 100; // Límite de usuarios registrados
 const int max_prestamos = 100;
 
 
