@@ -108,7 +108,7 @@ void Actualizarlibro(){
 		cout<<"No hay productos registrados"<<endl;
 	}else{
 		int Actualizarlibro;
-		cout<<"Ingrese el indice del producto a actualizar"<<endl;
+		cout<<"Ingrese el indice del libro a actualizar (1 - "<<cantLibros<<"): ";
 		cin>>Actualizarlibro;
 		cin.ignore();
 		bool Actualizar=false;
