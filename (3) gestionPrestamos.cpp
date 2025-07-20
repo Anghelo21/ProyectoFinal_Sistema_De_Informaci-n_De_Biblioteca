@@ -6,25 +6,21 @@ using namespace std;
 Prestamo prestamos[max_prestamos];
 int cantPrestamos = 0;
 void Mostrarlibrosyusuarios(){
-	cout << "\n================ LISTADO DE LIBROS ================\n";
-    cout << "ID  | TITULO                 | AUTOR             | DISP | TOTAL\n";
-    cout << "----+------------------------+-------------------+------+------\n";
+	cout << "\n========== LIBROS REGISTRADOS ==========\n";
     for (int i = 0; i < cantLibros; i++) {
-        cout << biblioteca[i].indic << "   | "
-             << biblioteca[i].titulo << " | "
-             << biblioteca[i].autor << " | "
-             << biblioteca[i].copias << "    | "
-             << biblioteca[i].copiastotales << endl;
+    	cout << "ID: " << biblioteca[i].indic
+             << " | Titulo: " << biblioteca[i].titulo
+             << " | Editorial: " << biblioteca[i].editorial
+             << " | Copias Totales: " << biblioteca[i].copiastotales
+             << " | Copias Disponibles: " << biblioteca[i].copias
+             << endl;
     }
-    cout << "===================================================\n";
-    cout << "\n========== LISTA DE USUARIOS ==========\n";
-    cout << "ID  | Nombre               | Edad | DNI\n";
-    cout << "----+----------------------+------|-----------\n";
+	cout << "\n========== USUARIOS REGISTRADOS ==========\n";
     for (int i = 0; i < cantUsuarios; i++) {
-        cout << personas[i].id << "   | "
-             << personas[i].nombre << " | "
-             << personas[i].edad << "   | "
-             << personas[i].dni << endl;
+        cout << "ID: " << personas[i].id
+             << " | Nombre: " << personas[i].nombre
+             << " | Edad: " << personas[i].edad
+             << " | DNI: " << personas[i].dni << endl;
     }
 }
 void Prestar(){
