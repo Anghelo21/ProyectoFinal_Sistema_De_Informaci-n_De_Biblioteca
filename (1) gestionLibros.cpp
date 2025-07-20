@@ -124,14 +124,15 @@ void Actualizarlibro(){
 				cin>>biblioteca[i].NumPaginas;
 				cout<<"Anio de publicacion: ";
 				cin>>biblioteca[i].anio;
-				cout<<"Copias disponibles del libro: ";
-				cin>>biblioteca[i].copias;
+				int antiguo;
+				antiguo = biblioteca[i].copiastotales;
 				char actualizarTotales;
 				cout << "¿Deseas actualizar el total de copias originales? (s/n): ";
 				cin >> actualizarTotales;
 				if(actualizarTotales == 's' || actualizarTotales == 'S'){
 					cout << "Nuevo total de copias (actualmente tiene " << biblioteca[i].copiastotales << "): ";
 					cin >> biblioteca[i].copiastotales;
+					biblioteca[i].copias = (biblioteca[i].copiastotales - antiguo) + biblioteca[i].copias; 
 				}
 				cin.ignore();
 				Actualizar = true;
